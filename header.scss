@@ -1,0 +1,58 @@
+
+.header_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 2% 0;
+}
+
+.header {
+    color: $primaryColor;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    font-family: $logoFont;
+    justify-content: center;
+    order: 2;
+    &_heading {
+        flex-basis: 100%;
+        font-size: 2.4rem;
+        margin: 4% 0;
+        text-align: center;
+        &_contrast {
+            color: $contrastColor;
+        }
+    }
+    &_link {
+        color: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        text-decoration: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .header_container {
+        background-color: $secondaryColor;
+        border-bottom: 1px solid #EEE;
+        left: 0;
+        height: $headerHeight;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
+
+    .header {
+        align-items: center;
+        flex-basis: 40%;
+        order: 1;
+        &_heading {
+            font-size: 2.2rem;
+            margin: 0;
+            max-width: $siteMaxWidth;
+        }
+    }
+
+    
+}

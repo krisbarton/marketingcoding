@@ -1,0 +1,99 @@
+
+
+.standard_signup {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    font-size: 1.2rem;
+    flex-basis: 96%;
+    padding: 2%;
+    position: relative;
+    .fas {
+        display: none;
+    }
+}
+
+.standard_signup h2 {
+    @include articleHeading();
+    border-bottom: 1px solid $contrastColor;
+    color: $secondaryColor;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0 0 1% 0;
+    text-transform: uppercase;
+}
+
+.standard_signup_form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.standard_signup_name {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+}
+
+.standard_signup_email {
+    flex-basis: 100%;
+    margin-bottom: 2%;
+}
+
+.standard_signup_input {
+    background-color: $primaryColor;
+    border: 1px solid $secondaryColor;
+    border-radius: 10px;
+    color: $contrastColor;
+    font-family: $standardFont;
+    font-size: 1.3rem;
+    margin: 1% 0;
+    padding: 3%;
+    width: 90%;
+}
+
+.standard_signup_button {
+    flex-basis: 100%;
+    margin-top: 1%;
+}
+
+.standard_signup_submit {
+    @include button();
+    border: 0;
+    cursor: pointer;
+    padding: 2% 0;
+    margin-bottom: 2%;
+    width: 96%;
+}
+
+@media only screen and (min-width: 600px) {
+    .standard_signup {
+        border-radius: 10px;
+        flex-basis: 76%;
+        font-size: 1.3rem;
+        max-width: calc(1000px - 4%);
+        .fas {
+            color: #333;
+            font-size: 5rem;
+            position: absolute;
+            right: 5%;
+            top: 40%;
+        }
+    }
+    .standard_signup_heading {
+        font-size: 2.8rem;
+    }
+
+    .standard_signup_name {
+        flex-basis: 40%;
+        margin-bottom: 0;
+    }
+    
+    .standard_signup_email {
+        flex-basis: 40%;
+        margin-bottom: 0;
+    }
+
+    .standard_signup_submit {
+        margin: 0 2% 0 0;
+        padding: 1%;
+        width: auto;
+    }
+}

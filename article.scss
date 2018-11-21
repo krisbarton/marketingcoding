@@ -1,0 +1,167 @@
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article_code {
+    border-left: 10px solid #CCC;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10%;
+}
+
+.article_content {
+    flex-basis:96%;
+    font-size: 1.3rem;
+    line-height: 1.6em;
+    padding: 0 2%;
+}
+
+.article_content a {
+    color: $contrastColor;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+.article_content h1 {
+    @include articleHeadingMobile();
+    margin: 5% 0;
+    padding-bottom: 2%;
+}
+
+.article_content h2 {
+    @include articleHeadingMobile();
+    margin: 5% 0;
+    padding: 4% 0;
+}
+
+.article_content h3 {
+    font-family: $headerFont;
+}
+
+.article_content img {
+    width: 100%;
+}
+
+.article_content_ad-right {
+    float: right;
+    margin-left: 4%;
+    margin-right: 0;
+    padding: 2%;
+}
+
+.article_content_ad-left {
+    float: left;
+    margin-right: 4%;
+    margin-left: 0;
+    padding: 2%;
+}
+
+.article_quote:before {
+    color: #CCC;
+    content: open-quote;
+    font-size: 7rem;
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+
+.article_quote:after {
+    color: #CCC;
+    content: close-quote;
+    font-size: 7rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.article_quote {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.6em;
+    margin: 4% 0;
+    padding: 0 10%;
+    position: relative;
+}
+
+.article_affiliate_disclaimer {
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    color: #333;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.article_content h2.about_subTitle {
+    color: $primaryColor;
+    padding: 0;
+    margin-top: 0;
+    text-align: left;
+} 
+
+.article_content h1.about_title {
+    margin-bottom: 0;
+    padding: 0;
+    text-align: left;
+} 
+
+
+@media only screen and (min-width: 600px) {
+    .article_content {
+        flex-basis: 80%;
+        max-width: $siteMaxWidth;
+    }
+
+    .article_content h1 {
+        @include articleHeading();
+        font-size:4rem;
+        line-height: 1em;
+        margin: 4% 0 2% 0;  
+    }
+
+    .article_content h2 {
+        @include articleHeading();
+        font-size: 2.5rem;
+        line-height: 1.2em;
+        margin: 0;
+    }
+
+ 
+    .article_content h3 {
+        font-size: 2.2rem;
+        line-height: 1.2em; 
+        margin: 4% 0;
+        text-transform: capitalize;
+    }
+
+    .article_content h4 {
+        font-size: 2rem;
+        line-height: 1.2em;
+        margin: 4% 0;
+        text-transform: capitalize;
+    }
+
+    .article_content h5 {
+        font-size: 1.9rem;
+        line-height: 1.2em;
+        margin: 4% 0;
+        text-transform: capitalize;
+    }
+
+    .article_content img {
+        float: left;
+        margin-right: 2%;
+        width: 30%;
+    }
+
+    .article_content img.article_content_img {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        width: auto;
+    }
+}

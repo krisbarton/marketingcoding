@@ -1,0 +1,43 @@
+.breadcrumb {
+    align-items: center;
+    background-color: $primaryColor;
+    color: $contrastColor;
+    display: flex;
+    font-size: 0.8rem;
+    padding: 2% 4%;
+    .fas {
+        font-size: 0.8rem;
+        margin-right: 2%;
+    }
+    &_link {
+        color: $secondaryColor;
+        text-decoration: none;
+        margin-right: 2%;
+        &:hover {
+            color: $secondaryContrastColor;
+            text-decoration: underline;
+        }
+    }
+    &_selected {
+        color: #999;
+        margin-right: 2%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .breadcrumb {
+        font-size:1rem; 
+        margin-top: $headerHeight;
+        padding: 1% 4%;
+        .fas {
+            font-size: 1rem;
+            margin-right: 1%;
+        }
+        &_link {
+            margin-right: 1%;
+        }
+        &_selected {
+            margin-right: 1%;
+        }
+    }
+}

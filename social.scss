@@ -1,0 +1,38 @@
+.social {
+    background-color: transparent;
+    bottom: 0;
+    color: $primaryColor;
+    display: flex;
+    left: 0;
+    padding: 1% 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    &_link_facebook {
+        background-color: #4267b2;
+    }
+    &_link_twitter {
+        background-color: #00c3f3;
+    }
+    &_link {
+        border-radius: 10px;
+        color: $secondaryColor;
+        flex-basis: 40%;
+        margin-left: 1%;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        .fab {
+            margin-right: 1%;
+        }
+        &:hover {
+            background-color: $secondaryContrastColor;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .social_link {
+        flex-basis: 15%;
+    }
+}

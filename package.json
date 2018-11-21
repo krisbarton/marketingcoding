@@ -1,0 +1,19 @@
+{
+  "name": "marketingcoding",
+  "version": "1.0.0",
+  "description": "Marketing Coding website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Kris Barton",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-image": "^4.3.0",
+    "gulp-inject": "^4.3.2",
+    "gulp-sass": "^4.0.1"
+  }
+}
